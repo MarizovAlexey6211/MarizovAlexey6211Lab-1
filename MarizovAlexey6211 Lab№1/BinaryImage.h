@@ -35,7 +35,44 @@ public:
                     count++;
         return (double)count / (rows * cols);
     }
+    BinaryImage& operator=(const BinaryImage& other) {
+        if (this == &other)
+            return *this;
+        if (cols != other.cols || rows != other.rows) {
+            if (data) {
+                for (int i = 0; i < rows; ++i)
+                    if (data[i])
+                        delete[] data[i];
+                delete[] data;
+            }
+            cols = other.cols;
+            rows = other.rows;
+            data = new bool* [rows];
+            for (int i = 0; i < rows; ++i)
+                data[i] = new bool[cols];
+            for (int i = 0; i < rows; ++i)
+                for (int j = 0; j < cols; ++j)
+                    data[i][j] = other.data[i][j];
+        }
+        return *this;
+    }
+    bool operator==(const BinaryImage& rhs) {
+        if (cols != rhs.cols || rows != rhs.rows)
+            return false;
+        bool res = true;
+        for (int i = 0; i < rows; ++i)
+            for (int j = 0; j < cols; ++j)
+                if (data[i][j] != rhs.data[i][j]) {
+                    res = false;
+                    break;
+                }
+        return res;
+    }
+    bool operator!=(const BinaryImage& rhs)
+    {
+        return !(*this == rhs);
 
+    }
 };
 
 #endif /* BinaryImage_h */
