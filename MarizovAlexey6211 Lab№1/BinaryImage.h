@@ -97,6 +97,61 @@ public:
             }
         }
     }
+
+    BinaryImage& operator*(const BinaryImage& rhs) {
+        if (rows != rhs.rows || cols != rhs.cols) {
+            throw "Error";
+        }
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == true && rhs.data[i][j] == true)
+                    data[i][j] = true;
+                else
+                    data[i][j] = false;
+            }
+        }
+        return *this;
+    }
+
+    BinaryImage& operator*(bool value) {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == true && value == true)
+                    data[i][j] = true;
+                else
+                    data[i][j] = false;
+            }
+        }
+        return *this;
+    }
+
+
+    BinaryImage& operator+(const BinaryImage& rhs) {
+        if (rows != rhs.rows || cols != rhs.cols) {
+            throw"Error";
+        }
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == false && rhs.data[i][j] == false)
+                    data[i][j] = false;
+                else
+                    data[i][j] = true;
+            }
+        }
+        return *this;
+    }
+
+    BinaryImage& operator+(bool value) {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == false && value == false)
+                    data[i][j] = false;
+                else
+                    data[i][j] = true;
+            }
+        }
+        return *this;
+    }
 };
 
 #endif /* BinaryImage_h */
