@@ -73,6 +73,30 @@ public:
         return !(*this == rhs);
 
     }
+    bool operator()(int i, int j) const {
+        if (!(i >= 0 && i < rows && j >= 0 && j < cols)) {
+            throw "Error";
+        }
+        return data[i][j];
+    }
+
+    bool& operator()(int i, int j) {
+        if (!(i >= 0 && i < rows && j >= 0 && j < cols)) {
+            throw "Error";
+        }
+        return data[i][j];
+    }
+
+    void operator!() {
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                if (data[i][j] == true)
+                    data[i][j] = false;
+                else
+                    data[i][j] = true;
+            }
+        }
+    }
 };
 
 #endif /* BinaryImage_h */
