@@ -152,6 +152,21 @@ public:
         }
         return *this;
     }
+
+
+    bool PictureScreen() {
+        if (data == nullptr) {
+            cout << "Error";
+            return false;
+        }
+        for (int i = 0; i < rows; ++i) {
+            for (int j = 0; j < cols; ++j) {
+                cout << "[" << i << "]" << "[" << j << "] = ";
+                cin >> data[i][j];
+            }
+        }cout << endl << endl;
+        return true;
+    }
 };
 
 #endif /* BinaryImage_h */
