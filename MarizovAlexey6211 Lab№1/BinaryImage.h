@@ -167,6 +167,21 @@ public:
         }cout << endl << endl;
         return true;
     }
+    friend std::ostream& operator<<(std::ostream& out, const BinaryImage& bi);
 };
+std::ostream& operator<<(std::ostream& out, const BinaryImage& bi)
+{
+    for (int i = 0; i < bi.rows; ++i) {
+        for (int j = 0; j < bi.cols; ++j) {
+            if (bi.data[i][j] == false)
+                out << '.';
+            else
+                out << '1';
+        }
+        out << '\n';
+    }
+
+    return out;
+}
 
 #endif /* BinaryImage_h */
