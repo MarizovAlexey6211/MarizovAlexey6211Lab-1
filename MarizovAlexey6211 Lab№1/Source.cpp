@@ -53,4 +53,26 @@ int main()
 	cout << "Перемножение обратных объектов" << endl;
 	cout << FirstObject * SecondObject;
 	*/
+
+
+
+	//Запрос данных у польователя и вывод 
+/*
+	int ans;
+	cout << "\nСоздать бинарное изображение?\n" << "1 да\n" << "2 нет\nВведите цифру:";
+	cin >> ans;
+	if (ans == 1) {
+		int rows, cols;
+		cout << "\nСколько строк ?\nrows=";
+		cin >> rows;
+		cout << "Сколько колонок ?\ncols=";
+		cin >> cols;
+		BinaryImage ThirdObject(rows, cols);
+		//
+		ThirdObject.PictureScreen();
+		cout<<ThirdObject;
+		cout << "Коэффицент заполнения:\n";
+		cout << ThirdObject.Ratio();
+
+}*/
 }
