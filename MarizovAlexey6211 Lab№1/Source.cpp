@@ -75,4 +75,34 @@ int main()
 		cout << ThirdObject.Ratio();
 
 }*/
+//Сложение объектов
+/*
+	BinaryImage FourthObject(3, 3);
+	FourthObject(0, 0) = 0;
+	FourthObject(0, 1) = 0;
+	FourthObject(0, 2) = 0;
+	FourthObject(1, 0) = 1;
+	FourthObject(1, 1) = 0;
+	FourthObject(1, 2) = 1;
+	FourthObject(2, 0) = 0;
+	FourthObject(2, 1) = 1;
+	FourthObject(2, 2) = 0;
+	cout << "Чётвертый объект:" << endl;
+	cout << FourthObject;
+
+	BinaryImage FiveObject(3, 3);
+	FiveObject(0, 0) = 1;
+	FiveObject(0, 1) = 1;
+	FiveObject(0, 2) = 1;
+	FiveObject(1, 0) = 0;
+	FiveObject(1, 1) = 0;
+	FiveObject(1, 2) = 0;
+	FiveObject(2, 0) = 1;
+	FiveObject(2, 1) = 1;
+	FiveObject(2, 2) = 1;
+	cout << "Пятый объект:" << endl;
+	cout << FiveObject;
+	cout << "Сложение объектов: " << endl;
+	cout << FourthObject + FiveObject;
+	cout << "\n" << "\n" << "\n";*/
 }
