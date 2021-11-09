@@ -21,8 +21,8 @@ public:
         if (data) {
             for (int i = 0; i < rows; ++i)
                 if (data[i])
-                    delete[] data[i];
-            delete[] data;
+                    delete[] data[i];//удаляем данные
+            delete[] data;//удаляем память
         }
     }
 
@@ -184,4 +184,4 @@ std::ostream& operator<<(std::ostream& out, const BinaryImage& bi)
     return out;
 }
 
-#endif /* BinaryImage_h */
+#endif  BinaryImage_h 

@@ -53,11 +53,11 @@ int main()
 	cout << "Перемножение обратных объектов" << endl;
 	cout << FirstObject * SecondObject;
 	*/
-
+	
 
 
 	//Запрос данных у польователя и вывод 
-/*
+	/*
 	int ans;
 	cout << "\nСоздать бинарное изображение?\n" << "1 да\n" << "2 нет\nВведите цифру:";
 	cin >> ans;
@@ -73,10 +73,10 @@ int main()
 		cout<<ThirdObject;
 		cout << "Коэффицент заполнения:\n";
 		cout << ThirdObject.Ratio();
-
-}*/
+		*/
+}
 //Сложение объектов
-/*
+	/*
 	BinaryImage FourthObject(3, 3);
 	FourthObject(0, 0) = 0;
 	FourthObject(0, 1) = 0;
@@ -105,4 +105,69 @@ int main()
 	cout << "Сложение объектов: " << endl;
 	cout << FourthObject + FiveObject;
 	cout << "\n" << "\n" << "\n";*/
-}
+		//Перемножение объектов
+/*
+BinaryImage SixObject(3, 3);
+SixObject(0, 0) = 1;
+SixObject(0, 1) = 1;
+SixObject(0, 2) = 1;
+SixObject(1, 0) = 0;
+SixObject(1, 1) = 1;
+SixObject(1, 2) = 0;
+SixObject(2, 0) = 1;
+SixObject(2, 1) = 1;
+SixObject(2, 2) = 1;
+cout << "Шестой объект:" << endl;
+cout << SixObject;
+
+BinaryImage SevenObject(3, 3);
+SevenObject(0, 0) = 0;
+SevenObject(0, 1) = 1;
+SevenObject(0, 2) = 1;
+SevenObject(1, 0) = 1;
+SevenObject(1, 1) = 1;
+SevenObject(1, 2) = 0;
+SevenObject(2, 0) = 0;
+SevenObject(2, 1) = 1;
+SevenObject(2, 2) = 1;
+cout << "Седьмой объект:" << endl;
+cout << SevenObject;
+cout << "Перемножение объектов: " << endl;
+cout << SixObject * SevenObject;
+return 0;*/
+
+
+//throw
+/*
+BinaryImage EigthObject(3, 3);
+EigthObject(6, 0) = 0;
+EigthObject(0, 1) = 1;
+EigthObject(0, 2) = 1;
+EigthObject(1, 0) = 1;
+EigthObject(1, 1) = 1;
+EigthObject(1, 2) = 0;
+EigthObject(2, 0) = 0;
+EigthObject(2, 1) = 1;
+EigthObject(2, 2) = 1;
+/*cout << "Восьмой объект:" << endl;
+cout << EigthObject;
+BinaryImage NineObject(2, 2);
+NineObject(0, 0) = 1;
+NineObject(0, 1) = 1;
+
+NineObject(1, 0) = 0;
+NineObject(1, 1) = 1;
+
+NineObject(2, 0) = 1;
+NineObject(2, 1) = 1;
+
+cout << "Девятый объект:" << endl;
+cout << NineObject;
+
+
+cout << "Перемножение объектов: " << endl;
+cout << NineObject * EigthObject;
+return 0;
+
+
+}*/
